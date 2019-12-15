@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE5DA3D1-F769-4996-AF41-A10F047AAA3A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>App_FOR_DB</RootNamespace>
+    <AssemblyName>App_FOR_DB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TooSharp.Core">
+      <HintPath>..\..\..\..\..\..\TooSharp ORM C#.Net MySql\bin\TooSharp.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEditDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientHistory.Designer.cs">
+      <DependentUpon>PatientHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TSModels\Visits.cs" />
+    <Compile Include="TSModels\TSRelationships.cs" />
+    <Compile Include="TSModels\Treatments.cs" />
+    <Compile Include="TSModels\Servises.cs" />
+    <Compile Include="TSModels\Posts.cs" />
+    <Compile Include="TSModels\Patient_histories.cs" />
+    <Compile Include="TSModels\Patients.cs" />
+    <Compile Include="TSModels\Doctors.cs" />
+    <Compile Include="AddEditVisits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditVisits.Designer.cs">
+      <DependentUpon>AddEditVisits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutorizationForm.Designer.cs">
+      <DependentUpon>AutorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetTherapy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetTherapy.Designer.cs">
+      <DependentUpon>SetTherapy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditDoctor.Designer.cs">
+      <DependentUpon>AddEditDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditServises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditServises.Designer.cs">
+      <DependentUpon>AddEditServises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors_View.Designer.cs">
+      <DependentUpon>Doctors_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditPatientForm.Designer.cs">
+      <DependentUpon>AddEditPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients_View.Designer.cs">
+      <DependentUpon>Patients_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Servises_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servises_View.Designer.cs">
+      <DependentUpon>Servises_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visits_ViewForDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visits_ViewForDoctor.Designer.cs">
+      <DependentUpon>Visits_ViewForDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visits_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visits_View.Designer.cs">
+      <DependentUpon>Visits_View.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEditDoctor.resx">
+      <DependentUpon>AddEditDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditPatientForm.resx">
+      <DependentUpon>AddEditPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditServises.resx">
+      <DependentUpon>AddEditServises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditVisits.resx">
+      <DependentUpon>AddEditVisits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutorizationForm.resx">
+      <DependentUpon>AutorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors_View.resx">
+      <DependentUpon>Doctors_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientHistory.resx">
+      <DependentUpon>PatientHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients_View.resx">
+      <DependentUpon>Patients_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Servises_View.resx">
+      <DependentUpon>Servises_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetTherapy.resx">
+      <DependentUpon>SetTherapy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visits_ViewForDoctor.resx">
+      <DependentUpon>Visits_ViewForDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visits_View.resx">
+      <DependentUpon>Visits_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
